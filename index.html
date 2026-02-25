@@ -4,17 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nova Strike | Comunidade PT</title>
+
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Partículas -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
+
 <body>
+
+<div id="particles-js"></div>
 
 <header>
     <img src="images/novastrike.png" class="logo">
     <nav>
         <a href="#home">Início</a>
         <a href="#team">Membros</a>
-        <a href="#events">Eventos</a>
         <a href="#recruit">Recrutamento</a>
     </nav>
 </header>
@@ -22,45 +28,37 @@
 <section id="home" class="hero">
     <h1>Nova Strike</h1>
     <p>Comunidade Portuguesa de Call of Duty</p>
-    <a href="https://discord.gg/tzxnCDkKSh" target="_blank" class="btn">Entrar no Discord</a>
+
+    <h3>Membros Ativos</h3>
+    <div class="counter" id="memberCount">0</div>
+
+    <a href="https://discord.gg/tzxnCDkKSh" target="_blank" class="btn">
+        Entrar no Discord
+    </a>
 </section>
 
 <section id="team">
     <h2>Nossa Equipa</h2>
     <div class="cards">
-        <div class="card">
-            <h3>Fundador</h3>
-            <p>Sh3llby</p>
-        </div>
-        <div class="card">
-            <h3>Competitivo</h3>
-            <p>Nome Aqui</p>
-        </div>
-        <div class="card">
-            <h3>Streamer</h3>
-            <p>Nome Aqui</p>
-        </div>
-    </div>
-</section>
-
-<section id="events">
-    <h2>Eventos</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Torneios Semanais</h3>
-            <p>Por definir</p>
-        </div>
-        <div class="card">
-            <h3>Warzone Night</h3>
-            <p>Por definir</p>
-        </div>
+        <div class="card"><h3>Líder</h3><p>Nome</p></div>
+        <div class="card"><h3>Competitivo</h3><p>Nome</p></div>
+        <div class="card"><h3>Streamer</h3><p>Nome</p></div>
     </div>
 </section>
 
 <section id="recruit" class="recruit">
-    <h2>Junta-te à Elite</h2>
-    <p>Procuramos jogadores competitivos e ativos.</p>
-    <a href="https://discord.gg/tzxnCDkKSh" target="_blank" class="btn">Candidatar</a>
+    <h2>Recrutamento</h2>
+
+    <form name="recrutamento" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="recrutamento">
+
+        <input type="text" name="nome" placeholder="Nome no jogo" required>
+        <input type="text" name="idade" placeholder="Idade" required>
+        <input type="text" name="rank" placeholder="Rank atual" required>
+        <textarea name="mensagem" placeholder="Porque queres entrar?" required></textarea>
+
+        <button type="submit">Enviar Candidatura</button>
+    </form>
 </section>
 
 <footer>
